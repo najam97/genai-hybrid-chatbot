@@ -8,6 +8,7 @@ import openai
 import logging
 from typing import List, Dict, Optional
 import re
+import json
 
 logger = logging.getLogger(__name__)
 
@@ -116,7 +117,7 @@ class SQLPipeline:
                 
                 logger.info(f"Query executed successfully. Returned {len(result_list)} rows.")
                 
-                return str(result_list)
+                return json.dumps(result_list, default=str)
         
         except sqlite3.Error as e:
             logger.error(f"Database error: {e}")

@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "query": "What is the total revenue this month?",
+    "response": "The data retrieved does not contain any information about the total revenue for this month. It appears that no results were found in the database.",
+    "background": [
+      {
+        "type": "routing",
+        "route": "sql",
+        "confidence": 0.95,
+        "reasoning": "The query is requesting a specific financial aggregation (total revenue) for a defined time period (this month), which aligns with structured data retrieval."
+      },
+      {
+        "type": "sql_generated",
+        "sql": "SELECT SUM(o.amount) AS total_revenue\nFROM orders o\nWHERE strftime('%Y-%m', o.order_date) = strftime('%Y-%m', 'now');"
+      },
+      {
+        "type": "sql_raw_data",
+        "data": "[{\"total_revenue\": null}]"
+      }
+    ],
+    "ts": 1779029885.7349856
+  }
+]
