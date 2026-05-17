@@ -1,4 +1,4 @@
-# Hybrid Chatbot: Production-Grade Architecture
+# Hybrid Chatbot: Talk to your structured and unstructured data using chatbot
 
 ## Executive Summary
 
@@ -22,7 +22,6 @@ A Streamlit web UI is available in `streamlit_app.py`.
 The old FastAPI UI is preserved in `api/app.py` as a backup.
 The Streamlit app uses the existing hybrid router and pipelines, and stores history server-side in `data/streamlit_history.json`.
 
-This codebase is designed to **impress hiring panels** evaluating your ability to build resilient, scalable systems at scale.
 
 ---
 
