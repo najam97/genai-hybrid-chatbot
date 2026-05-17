@@ -1,0 +1,21 @@
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+.container { display: grid; grid-template-columns: 300px 1fr 360px; gap: 12px; height: 100vh; padding: 12px; box-sizing: border-box; }
+.left, .center, .right { background: #fafafa; border: 1px solid #ddd; border-radius: 6px; padding: 12px; box-sizing: border-box; overflow: auto; }
+.panel { white-space: pre-wrap; font-family: Menlo, Monaco, monospace; background: #fff; padding: 12px; border-radius: 4px; border: 1px solid #eee; min-height: 60vh; }
+textarea { width: 100%; box-sizing: border-box; font-size: 14px; }
+button { margin-top: 8px; padding: 8px 12px; }
+.bg-item { margin-bottom: 10px; padding: 8px; border-left: 4px solid #eee; }
+.doc { margin-bottom: 8px; padding: 6px; background: #f6f8fa; border-radius: 4px; }
+
+/* Tabs and history */
+.tabs { display:flex; gap:8px; margin-bottom:8px; }
+.tab-btn { padding:6px 10px; border-radius:6px; border:1px solid #ddd; background:#fff; cursor:pointer; }
+.tab-btn.active { background:#0078d4; color:#fff; border-color:#0063b1; }
+.tab-content.hidden { display:none; }
+.left-controls { display:flex; gap:8px; margin-top:8px; }
+.history-row { padding:8px; border-bottom:1px solid #eee; display:flex; flex-direction:column; gap:6px; }
+.history-meta { display:flex; justify-content:space-between; align-items:center; }
+.history-actions { display:flex; gap:6px; }
+.history-snippet { color:#333; font-size:13px; max-height:56px; overflow:hidden; }
+.ts { font-size:12px; color:#666; margin-left:8px; }
+.history-controls { margin-bottom:8px; }

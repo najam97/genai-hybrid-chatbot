@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hybrid Chatbot</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="chat">Chat</button>
+        <button class="tab-btn" data-tab="history">History</button>
+      </div>
+
+      <div class="tab-content" id="chat">
+        <h3>Query</h3>
+        <textarea id="query" placeholder="Ask a question..." rows="6"></textarea>
+        <div class="left-controls">
+          <button id="send">Send</button>
+          <button id="clear-current">Clear Current</button>
+        </div>
+      </div>
+
+      <div class="tab-content hidden" id="history">
+        <h3>Conversation History</h3>
+        <div class="history-controls">
+          <button id="clear-history">Clear All History</button>
+        </div>
+        <div id="history-list">No history yet.</div>
+      </div>
+    </div>
+
+    <div class="center">
+      <h2>Response</h2>
+      <div id="response" class="panel">No response yet.</div>
+    </div>
+
+    <div class="right">
+      <h2>Background</h2>
+      <div id="background" class="panel">No background activity.</div>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
